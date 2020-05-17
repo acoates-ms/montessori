@@ -4,6 +4,8 @@ import './App.css';
 import AddPage from './AddPage';
 import SubtractPage from './SubtractPage';
 
+import tree from './tree.jpg';
+
 enum Page {
   Nav,
   Add,
@@ -44,11 +46,31 @@ function contentForPage(
       return (
         <div
           style={{
+            textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'start',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
+          <img src={tree} alt="logo" />
+          <div
+            style={{
+              width: 400,
+              textAlign: 'justify',
+              margin: 10,
+              color: 'darkGreen',
+              fontSize: 'xx-large',
+            }}
+          >
+            Free montessori resources
+          </div>
+          <div style={{ width: 400, textAlign: 'justify', margin: 10 }}>
+            Very simple page to print sets of montessori math problems. The math
+            problems are generated each time you visit the site, so you can
+            print as many problems as you need.
+          </div>
+
           <LinkButton
             title="Static Addition"
             description="Addition with NO carrying / exchanges"
